@@ -16,6 +16,8 @@ module.exports = {
   },
   rules: {
     'comma-dangle': ['error', 'never'],
+    'max-classes-per-file': 'off',
+    'no-unused-expressions': 'off',
     'no-param-reassign': ['error', { props: false }]
   }
 };
