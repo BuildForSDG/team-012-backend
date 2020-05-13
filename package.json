@@ -13,11 +13,14 @@
     "test": "__tests__"
   },
   "scripts": {
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:cover": "jest --coverage",
+    "clean": "rm -rf .cache .nyc_output build coverage dist && mkdir build",
+    "dev": "DEBUG=dev nodemon --exec babel-node src/server.js",
     "lint": "eslint \"src/**/*.js\"",
-    "start": "parcel ./src/index.html"
+    "start": "parcel ./src/index.html",
+    "sync-env": "sync-dotenv",
+    "test:cover": "jest --coverage",
+    "test:watch": "jest --watch",
+    "test": "jest"
   },
   "author": {
     "name": "Build For SDG",
@@ -32,16 +35,35 @@
     "url": "https://github.com/BuildForSDG/js-starter/issues"
   },
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "debug": "^4.1.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "swagger-ui-express": "^4.1.4"
+  },
   "devDependencies": {
     "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
     "@babel/preset-env": "^7.9.5",
     "babel-jest": "^25.4.0",
+    "chai": "^4.2.0",
     "eslint": "^6.8.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
+    "husky": "^4.2.5",
     "jest": "^25.4.0",
-    "parcel-bundler": "^1.12.4"
+    "nodemon": "^2.0.3",
+    "parcel-bundler": "^1.12.4",
+    "supertest": "^4.0.2",
+    "sync-dotenv": "^2.6.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run sync-env"
+    }
   },
   "browserslist": [
     "last 1 Chrome versions"
