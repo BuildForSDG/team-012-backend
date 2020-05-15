@@ -1,5 +1,6 @@
 # Team 012 Backend Project
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/f20ab7d0d1404d2781bf7e6adcc38dee)](https://app.codacy.com/gh/BuildForSDG/team-012-backend?utm_source=github.com&utm_medium=referral&utm_content=BuildForSDG/team-012-backend&utm_campaign=Badge_Grade_Settings)
 [![Build Status](https://travis-ci.org/BuildForSDG/team-012-backend.svg?branch=develop)](https://travis-ci.org/BuildForSDG/team-012-backend)
 [![Codacy Badge](https://img.shields.io/badge/Code%20Quality-D-red)](https://img.shields.io/badge/Code%20Quality-D-red)
 
